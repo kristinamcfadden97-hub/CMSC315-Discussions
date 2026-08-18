@@ -141,6 +141,11 @@ def main():
 
     child_device.set_mode("Cool")
     print(child_device.display_info())
+    # Edge case: test an unusual temperature value.
+    child_device.set_temperature(-10)
+    print("Edge case test:", child_device.display_info())
+
+
     demonstrate_namespaces()
     demonstrate_copying()
 
