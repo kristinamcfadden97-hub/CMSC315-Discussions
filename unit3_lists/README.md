@@ -28,3 +28,13 @@ Your reflection should be approximately 150–200 words and address the followin
 1. What concepts or skills did you learn while completing this assignment?
 2. What challenges did you encounter, and how did you overcome them?
 3. How do list operations impact performance in real-world applications?
+
+## Reflection
+
+For this assignment, I learned how Python lists handle insertion, deletion, and searching. I practiced inserting values at the beginning, middle, and end of a list and saw how existing elements shift when new values are added. I also used deletion with index validation so invalid positions would return None instead of causing an error. For searching, I used a linear search that checked each value one at a time until the target was found or the end of the list was reached.
+
+One challenge I had was making sure the deletion function handled invalid indexes and empty lists safely. I solved this by checking whether the index was within the valid range before removing an item. I also tested missing search values and insertion into an empty list to make sure the program handled edge cases correctly.
+
+List operations can affect performance depending on where changes are made. Insertions and deletions near the beginning or middle may require elements to shift, while operations near the end are often more efficient.
+
+A real-world example of a list would be a music playlist because songs can be added, removed, searched for, and organized in a specific order.
