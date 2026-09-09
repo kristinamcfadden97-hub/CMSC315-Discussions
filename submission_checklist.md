@@ -3,11 +3,11 @@
 Use this checklist before submitting your weekly discussion.
 
 ## Code Modification Checklist
-- [ ] I did **not** submit the starter unchanged.
-- [ ] I completed every `TODO (Student)` block in the starter file.
-- [ ] I added additional test cases beyond the starter examples.
-- [ ] I improved the print statements so the output is easy to understand.
-- [ ] I added comments explaining important logic.
+- [x] I did **not** submit the starter unchanged.
+- [x] I completed every `TODO (Student)` block in the starter file.
+- [x] I added additional test cases beyond the starter examples.
+- [x] I improved the print statements so the output is easy to understand.
+- [x] I added comments explaining important logic.
 
 ## Edge Case Checklist
 - [ ] I tested at least one edge case required by the starter.
@@ -15,8 +15,8 @@ Use this checklist before submitting your weekly discussion.
 - [ ] I handled empty structures, missing values, invalid input, or a comparable special case.
 
 ## Concept Understanding Checklist
-- [ ] My code demonstrates the required operations for the week.
-- [ ] My README explains how the structure or algorithm works.
+- [x] My code demonstrates the required operations for the week.
+- [x] My README explains how the structure or algorithm works.
 - [ ] My README includes at least one real-world use case or interpretation.
 
 ## Customization Checklist
