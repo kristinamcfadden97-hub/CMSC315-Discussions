@@ -26,7 +26,14 @@ def linear_search(lst, target):
     - Add comments explaining why linear search
       has O(n) time complexity.
     """
-    pass
+    # Linear search checks each value from beginning to end.
+    # In the worst case, every item is checked, so the runtime is O(n).
+    for index in range(len(lst)):
+        if lst[index] == target:
+            return index
+
+    # Return -1 if the target is not found.
+    return -1
 
 
 def binary_search(lst, target):
@@ -42,7 +49,27 @@ def binary_search(lst, target):
     - Add comments explaining how each iteration
       reduces the search space.
     """
-    pass
+    # Start with the entire sorted list as the search space.
+    low = 0
+    high = len(lst) - 1
+
+    while low <= high:
+        # Find the middle of the current search space.
+        mid = (low + high) // 2
+
+        if lst[mid] == target:
+            return mid
+
+        # Eliminate the left half if the target is larger.
+        elif lst[mid] < target:
+            low = mid + 1
+
+        # Eliminate the right half if the target is smaller.
+        else:
+            high = mid - 1
+
+    # Return -1 if the target is not found.
+    return -1
 
 
 def main():
@@ -61,7 +88,22 @@ def main():
     # 4. Use comments to clearly explain the results.
 
     print("\n=== SMALL DATASET TEST ===")
-    print("TODO: Create a small dataset and test both searches.")
+
+    # Create a small sorted dataset.
+    small_data = [55, 67, 72, 81, 90, 95]
+
+    # Search for a value that exists using both algorithms.
+    existing_target = 81
+    print("Linear search for 81:", linear_search(small_data, existing_target))
+    print("Binary search for 81:", binary_search(small_data, existing_target))
+
+    # Search for a value that does not exist using both algorithms.
+    missing_target = 100
+    print("Linear search for 100:", linear_search(small_data, missing_target))
+    print("Binary search for 100:", binary_search(small_data, missing_target))
+
+    # Both searches return the index when a value is found.
+    # Both searches return -1 when the value is not found.
 
     # ===============================
     # TODO (Student): LARGE DATASET
@@ -75,7 +117,18 @@ def main():
     #    efficient as datasets grow larger.
 
     print("\n=== LARGE DATASET TEST ===")
-    print("TODO: Create a larger dataset and compare results.")
+
+    # Create a larger sorted dataset containing values from 1 through 10000.
+    large_data = list(range(1, 10001))
+    large_target = 9999
+
+    # Test the same target with both search algorithms.
+    print("Linear search for 9999:", linear_search(large_data, large_target))
+    print("Binary search for 9999:", binary_search(large_data, large_target))
+
+    # Linear search may check thousands of values before finding the target.
+    # Binary search repeatedly cuts the search area in half, so it requires
+    # far fewer comparisons as the dataset becomes larger.
 
     # ===============================
     # TODO (Student): EDGE CASES
@@ -93,7 +146,21 @@ def main():
     # Explain what happens in each case.
 
     print("\n=== EDGE CASE TESTS ===")
-    print("TODO: Demonstrate and explain edge cases.")
+
+    # Edge case 1: An empty list contains no values, so both searches return -1.
+    empty_list = []
+    print("Linear search on empty list:", linear_search(empty_list, 81))
+    print("Binary search on empty list:", binary_search(empty_list, 81))
+
+    # Edge case 2: A single-element list can still be searched successfully.
+    single_element = [81]
+    print("Linear search on single-element list:", linear_search(single_element, 81))
+    print("Binary search on single-element list:", binary_search(single_element, 81))
+
+    # Edge case 3: A missing value causes both searches to return -1.
+    edge_data = [10, 20, 30, 40, 50]
+    print("Linear search for missing value:", linear_search(edge_data, 35))
+    print("Binary search for missing value:", binary_search(edge_data, 35))
 
 
 if __name__ == "__main__":
