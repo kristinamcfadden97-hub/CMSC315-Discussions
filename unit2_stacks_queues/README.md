@@ -34,3 +34,7 @@ Your reflection should be approximately 150–200 words and address the followin
 1. What concepts or skills did you learn while completing this assignment?
 2. What challenges did you encounter, and how did you overcome them?
 3. Explain the differences between stacks and queues as this relates to real-world applications.
+Implementation Summary
+I implemented a Stack using a Python list and a Queue using deque. The Stack used push, pop, and peek operations to demonstrate LIFO behavior. The Queue used enqueue, dequeue, and front operations to demonstrate FIFO behavior.
+I also tested edge cases for both data structures. I tested pop and peek on an empty stack, dequeue and front on an empty queue, and verified that both structures were empty after removing their only item.
+For the real-world examples, I used file actions to demonstrate how a stack processes the most recent action first. I used customers waiting in line to demonstrate how a queue processes customers in the order they arrived.
