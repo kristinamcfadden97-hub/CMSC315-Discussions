@@ -162,6 +162,37 @@ def main():
     print("Linear search for missing value:", linear_search(edge_data, 35))
     print("Binary search for missing value:", binary_search(edge_data, 35))
 
+    # ===============================
+    # PERFORMANCE ANALYSIS
+    # ===============================
+    # Linear search has O(n) time complexity because it may need to
+    # check every item before finding the target.
+    # Binary search has O(log n) time complexity because each comparison
+    # eliminates half of the remaining search space.
+
+    print("\n=== PERFORMANCE ANALYSIS ===")
+    print("Linear search time complexity: O(n)")
+    print("Binary search time complexity: O(log n)")
+    print("Binary search becomes more efficient as a sorted dataset gets larger.")
+
+    # ===============================
+    # REAL-WORLD SEARCH SCENARIO
+    # ===============================
+    # This example represents searching for a song in a music library.
+    # Linear search can search an unsorted list, while binary search
+    # requires the songs to already be sorted.
+
+    print("\n=== REAL-WORLD SEARCH SCENARIO ===")
+
+    songs = ["All The Stars", "God's Plan", "Love Galore", "Passionfruit", "Snooze"]
+    song_target = "Passionfruit"
+
+    print("Linear search for Passionfruit:", linear_search(songs, song_target))
+    print("Binary search for Passionfruit:", binary_search(songs, song_target))
+
+    # Both searches find the song, but binary search can become much faster
+    # when searching a large sorted music library.
+
 
 if __name__ == "__main__":
     main()
